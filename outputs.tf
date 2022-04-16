@@ -31,9 +31,9 @@ output "private_subnet_3_id" {
 }
 
 output "private_subnets" {
-  value = tolist(aws_subnet.private-subnet-1.id, aws_subnet.private-subnet-2.id, aws_subnet.private-subnet-3.id)
+  value = [aws_subnet.private-subnet-1.id, aws_subnet.private-subnet-2.id, aws_subnet.private-subnet-3.id]
 }
 
 output "public_subnets" {
-  value = tolist(aws_subnet.public-subnet-1.id, aws_subnet.public-subnet-2.id, aws_subnet.public-subnet-3.id)
+  value = [aws_subnet.public-subnet-1.id, aws_subnet.public-subnet-2.id, aws_subnet.public-subnet-3.id]
 }
